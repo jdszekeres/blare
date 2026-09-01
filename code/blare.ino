@@ -13,6 +13,8 @@
 #define TFT_CS 4
 #define TFT_BL 5
 
+#define BUZZER_PIN 8;
+
 // Fix setColRowStart() by exposing it via a subclass
 class MyST7789 : public Adafruit_ST7789 {
 public:
@@ -33,6 +35,12 @@ unsigned long currentMillis = 0; // Variable to store the current time in millis
 
 unsigned long lastUpdatedMillis = 0; // Variable to store the last update time in milliseconds
 unsigned long lastUpdateTime = 0; // Variable to store the last update time
+
+
+int alarmHour = 7; // Set the alarm hour (24-hour format)
+int alarmMinute = 30; // Set the alarm minute
+
+boolean alarmTriggered = false; // Flag to indicate if the alarm has been triggered
 
 
 void setup() {
@@ -98,5 +106,12 @@ void loop() {
     tft.setTextColor(ST77XX_WHITE);
     tft.setTextSize(6);
     tft.printf("%02d:%02d:%02d", hours, minutes, seconds); // Print time in HH:MM:SS format
+
+
+    if (hours == alarmHour && minutes == alarmMinute && !alarmTriggered) {
+        alarmTriggered = true; // Set the flag to indicate the alarm has been triggered
+        song(BUZZER_PIN); // Call the song function to play the alarm sound
+        alarmTriggered = false; // Reset the flag after the alarm has been triggered
+    }
 
 }
