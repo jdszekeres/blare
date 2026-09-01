@@ -37,3 +37,14 @@ The PCB is designed and created in KiCad. It uses a:
 #### Case
 ![Case](screenshots/case_white.png)
 The case is designed in Onshape it houses all the component with a top for the screen and keyswitches. It has holes for sound and charging
+
+
+### Software
+
+#### Features
+- Time Sync to the National Institute of Standards and Time (NIST)
+- Custom alarm time (WIP)
+- Custom alarm tone (WIP)
+- Web control interface (WIP)
+
+*Key Challenges*: single threaded processing, storage space constraints, robust wifi fallbacks

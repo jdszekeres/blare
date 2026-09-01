@@ -3,7 +3,7 @@
 
 unsigned long getNtpTime() {
     WiFiUDP udp;
-    const char* ntpServer = "pool.ntp.org";
+    const char* ntpServer = "time-a-b.nist.gov";
     const int ntpPort = 123;
     const int ntpPacketSize = 48;
     byte ntpPacket[ntpPacketSize];
