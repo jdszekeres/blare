@@ -3,6 +3,13 @@
 
 An Alarm Clock for the Hack Club Blare YSWS. It contains references to the Monty Python's Flying Circus Dead Parrot Sketch
 
+<div style="display: flex; width: 100%; justify-content: center; align-items: center;">
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V7SOpUu7txE?si=CM7ldaMmQeSDvhP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+frame-src="https://youtube-nocookie.com" allowfullscreen></iframe>
+
+</div>
+
 ### Hardware
 
 #### BOM
